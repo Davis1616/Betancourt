@@ -1,0 +1,122 @@
+
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BordadosBetancourt.com | Bordados personalizados en Bogotá</title>
+  <meta name="description" content="BordadosBetancourt.com - Bordados personalizados con calidad, rapidez y confianza en Bogotá. Realiza tu pedido en línea o cotiza por WhatsApp.">
+  <meta name="keywords" content="bordados, bordados personalizados, Bogotá, uniformes bordados, Bordados Betancur, pedidos en línea">
+  <meta name="author" content="Bordados Betancourt">
+  <link rel="stylesheet" href="Qborbados.css">
+  <script src="Qpbordados.js" defer></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+<header>
+  <div class="logo-container">
+    <a href="borbados.html">
+      <img src="Logo_Final.1.PNG" alt="Logo Bordados Betancourt" class="logo">
+    </a>
+    <div class="titulo-banner">
+      <h1 class="nombre-empresa">Bordados Betancourt</h1>
+      <div class="header-banner">
+        ✨ Bordados personalizados con calidad, rapidez y confianza ✨
+      </div>
+    </div>
+  </div>
+
+  <!-- 🔹 Botones en el header -->
+  <nav class="header-buttons">
+    <a class="btn-cta" href="borbados.html">Inicio</a>
+    <a class="btn-cta" href="https://wa.me/573506151165" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="btn-cta" href="pedido.html">Hacer Pedido</a>
+  </nav>
+</header>
+
+  <main>
+
+    </section>
+
+    <!-- Bienvenida -->
+    <section id="inicio" class="bienvenida" data-aos="fade-up">
+      <h2>¡Bienvenidos a Bordados Betancourt!</h2>
+      <p>
+        Nos especializamos en bordados personalizados de la mejor calidad.
+        Nuestro compromiso es ofrecer productos únicos que reflejen la identidad 
+        y estilo de nuestros clientes. ¡Gracias por confiar en nosotros!
+      </p>
+    </section>
+
+
+    <!-- Sobre Nosotros -->
+    <section id="nosotros" class="sobre-nosotros">
+      <div class="columna" data-aos="fade-up">
+        <h2>Quiénes Somos</h2>
+        <p>
+          Somos una empresa de bordados dedicada a la calidad, innovación y personalización.
+          Cada pieza es elaborada con dedicación y detalle, buscando siempre superar las expectativas.
+        </p>
+      </div>
+      <div class="columna" data-aos="fade-up" data-aos-delay="200">
+        <h2>Cómo Trabajamos</h2>
+        <p>
+          Trabajamos con pasión, tecnología avanzada y materiales de alta calidad. 
+          Nos enfocamos en la satisfacción de nuestros clientes y la entrega puntual de cada proyecto.
+        </p>
+      </div>
+    </section>
+<!-- Galería -->
+ <section class="card-like trabajos-box" id="trabajos">
+  <h2 class="trabajos-titulo">Nuestros Trabajos</h2>
+<div class="slideshow-container">
+  <div class="slide fade"><img src="img1.png" alt="Bordado 1" onclick="openLightbox(0)"></div>
+  <div class="slide fade"><img src="img2.png" alt="Bordado 2" onclick="openLightbox(1)"></div>
+  <div class="slide fade"><img src="img3.png" alt="Bordado 3" onclick="openLightbox(2)"></div>
+  <div class="slide fade"><img src="img4.png" alt="Bordado 4" onclick="openLightbox(3)"></div>
+  <div class="slide fade"><img src="img6.png" alt="Bordado 5" onclick="openLightbox(4)"></div>
+  <div class="slide fade"><img src="img7.png" alt="Bordado 6" onclick="openLightbox(5)"></div>
+  <div class="slide fade"><img src="img5.png" alt="Bordado 7" onclick="openLightbox(6)"></div>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+  <img class="lightbox-content" id="lightbox-img">
+  <span class="next" onclick="changeSlide(1)">&#10095;</span>
+</div>
+<div class="map-container">
+  <h2>Dirección</h2>
+  <p>Carrera 69M # 70-70 Local 2, Bogotá D.C.</p>
+
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.853309028256!2d-74.12043682526689!3d4.698420641926782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9f79ab4f0a7d%3A0x123456789abcdef!2sCarrera%2069M%20%23%2070-70%20Local%202%2C%20Bogot%C3%A1%20DC!5e0!3m2!1ses!2sco!4v1693670400000!5m2!1ses!2sco"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Bordados Betancourt - Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    let slideIndex = 0;
+    const showSlides = () => {
+      let slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";  
+      slideIndex++;
+      if (slideIndex > slides.length) slideIndex = 1;
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 4000);
+    }
+    showSlides();
+  </script>
+</body>
+</html>
+

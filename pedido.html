@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BordadosBetancourt.com | Bordados personalizados en Bogotá</title>
+  <meta name="description" content="BordadosBetancourt.com - Bordados personalizados con calidad, rapidez y confianza en Bogotá. Realiza tu pedido en línea o cotiza por WhatsApp.">
+  <meta name="keywords" content="bordados, bordados personalizados, Bogotá, uniformes bordados, Bordados Betancur, pedidos en línea">
+  <meta name="author" content="Bordados Betancourt">
+  <link rel="stylesheet" href="Qborbados.css">
+  <script src="Qpagina.js" defer></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="Qborbados.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <a href="borbados.html">
+        <img src="Logo_Final.1.PNG" alt="Logo Bordados Betancourt" class="logo">
+      </a>
+      <div class="titulo-banner">
+    <h1 class="nombre-empresa"> Bordados Betancourt</h1>
+    <div class="header-banner">
+      ✨ Bordados personalizados con calidad, rapidez y confianza ✨
+    </div>
+  </div>
+</div>
+      
+    </div>
+    <nav>
+      <ul>
+        <li><a href="borbados.html">Inicio</a></li>
+        <li><a href="borbados.html#quienes">Nosotros</a></li>
+        <li><a href="https://wa.me/573506151165" target="_blank"> WhatsApp</a></li>
+      </ul>
+    </nav>
+  </header>
+<div class="pedidos-container" id="pedidos">
+  <h2>Contacto y Pedidos</h2>
+  <p><strong>Correo Empresarial:</strong> 
+    <a href="mailto:ptbetancourt1986@gmail.com">ptbetancourt1986@gmail.com</a>
+  </p>
+
+  <form onsubmit="enviarCorreo(event)">
+    <input type="text" id="nombre" placeholder="Tu nombre" required>
+    <input type="email" id="correo" placeholder="Tu correo" required>
+    <textarea id="mensaje" placeholder="Detalles del pedido" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <!-- Footer dentro del cuadro -->
+  <div class="footer-inside">
+    <p>&copy; 2025 Bordados Betancourt - Todos los derechos reservados</p>
+  </div>
+</div>
+<script>
+function enviarCorreo(e) {
+  e.preventDefault();
+  const nombre = document.getElementById("nombre").value;
+  const correo = document.getElementById("correo").value;
+  const mensaje = document.getElementById("mensaje").value;
+
+  const asunto = encodeURIComponent("Nuevo pedido de " + nombre);
+  const cuerpo = encodeURIComponent("Cliente: " + nombre + 
+                                    "\nCorreo: " + correo + 
+                                    "\n\nPedido:\n" + mensaje);
+
+  // 🔹 Abrir Gmail en el navegador con los datos ya cargados
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=ptbetancourt1986@gmail.com&su=${asunto}&body=${cuerpo}`;
+  window.open(gmailUrl, "_blank");
+}
+</script>
